@@ -1,11 +1,11 @@
+from typing import Callable
 
-def derivative(f, x, h):
-    return (f(x + h) - f(x)) / h
+from math_utils import differential
 
+w = 3
 
-
-def f(x):
-    return 2 * x ** 3
+def f(x : float) -> float:
+    return w * x
 
 
 
@@ -13,12 +13,12 @@ def f(x):
 
 x = 20
 h = 0.00000000001
-a = 6 * x ** 2
-d = derivative(f, x, h)
 
-print(f"{a=}")
-print(f"{d=}")
-print(abs(a - d))
+dy = differential(f, x, h)
+
+print(f"{dy=}")
+print(f"{x=}")
+print(f"{dy/w=}")
 
 
 
