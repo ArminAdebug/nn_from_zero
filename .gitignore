@@ -1,0 +1,280 @@
+# ============================================================
+# C++ / Visual Studio / Qt 6 / Python
+# ============================================================
+
+# ------------------------------------------------------------
+# Visual Studio
+# ------------------------------------------------------------
+
+.vs/
+.vscode/
+
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ------------------------------------------------------------
+# C / C++ Build Artifacts
+# ------------------------------------------------------------
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.obj
+*.o
+
+# Debug symbols
+*.pdb
+*.ilk
+*.exp
+
+# Static analysis / profiling
+*.idb
+*.ipch
+*.iobj
+*.ipdb
+
+# ------------------------------------------------------------
+# CMake
+# ------------------------------------------------------------
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+install_manifest.txt
+compile_commands.json
+
+# CMake generated files
+Makefile
+cmake-build-*/
+
+# Common build directories
+build/
+build-*/
+out/
+out-*/
+bin/
+obj/
+
+# ------------------------------------------------------------
+# Qt
+# ------------------------------------------------------------
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+*.qtc_clangd
+.qtc/
+CMakeLists.txt.user
+CMakeLists.txt.user.*
+
+# Qt generated files
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+
+# Qt generated build directories
+.qtcreator/
+.qmake.stash
+
+# ------------------------------------------------------------
+# Python
+# ------------------------------------------------------------
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+*.cover
+*.py,cover
+
+# Profiling
+*.prof
+
+# ------------------------------------------------------------
+# Virtual Environments
+# ------------------------------------------------------------
+
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------
+# Python Packaging
+# ------------------------------------------------------------
+
+*.egg
+*.egg-info/
+dist/
+build/
+develop-eggs/
+.eggs/
+sdist/
+wheels/
+
+pip-wheel-metadata/
+share/python-wheels/
+
+MANIFEST
+.installed.cfg
+*.egg-info/
+
+# ------------------------------------------------------------
+# Jupyter
+# ------------------------------------------------------------
+
+.ipynb_checkpoints/
+
+# ------------------------------------------------------------
+# IDE / Editor Temporary Files
+# ------------------------------------------------------------
+
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+
+# ------------------------------------------------------------
+# Operating System Files
+# ------------------------------------------------------------
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+.directory
+.Trash-*
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+
+*.log
+logs/
+
+# ------------------------------------------------------------
+# Environment / Secrets
+# ------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+
+# ------------------------------------------------------------
+# Local Configuration
+# ------------------------------------------------------------
+
+*.local
+*.local.*
+local/
+
+# ------------------------------------------------------------
+# Generated Documentation
+# ------------------------------------------------------------
+
+doxygen/html/
+doxygen/latex/
+docs/_build/
+
+# ------------------------------------------------------------
+# Temporary / Generated Files
+# ------------------------------------------------------------
+
+*.bak
+*.orig
+*.rej
+*.cache
+
+# ------------------------------------------------------------
+# Crash Dumps
+# ------------------------------------------------------------
+
+*.dmp
+*.stackdump
+
+# ------------------------------------------------------------
+# Qt / C++ Generated Debug Files
+# ------------------------------------------------------------
+
+*.autosave
+
+# ------------------------------------------------------------
+# Project-Specific Local Build Output
+# ------------------------------------------------------------
+
+Debug/
+Release/
+x64/
+x86/
+ARM/
+ARM64/
+
+# Visual Studio generated folders
+Debug/
+Release/
+ipch/
+
+# ------------------------------------------------------------
+# Keep Important Project Files
+# ------------------------------------------------------------
+
+# The following should normally remain tracked:
+# *.cpp
+# *.h
+# *.hpp
+# *.c
+# *.cc
+# *.cxx
+# *.py
+# *.pyi
+# CMakeLists.txt
+# *.cmake
+# *.pro
+# *.pri
+# *.ui
+# *.qrc
+# *.json
+# *.xml
+# *.yml
+# *.yaml
+# *.md
+# requirements.txt
+# pyproject.toml
+# README.md
