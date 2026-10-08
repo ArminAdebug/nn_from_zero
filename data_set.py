@@ -8,7 +8,7 @@ def generate_train_data(f, count : int):
 
     for i in range(count):
 
-        data.append((i, f(i)))
+        data.append((i / 100, f(i / 100)))
 
     random.shuffle(data)
 

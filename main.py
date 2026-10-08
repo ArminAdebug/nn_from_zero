@@ -15,11 +15,12 @@ def expected_patern(x):
     return 5 * x + 20
 
 
-h = 0.0000001
+h = 1e-9
 # learning rate
-lr = 0.001
+w_lr = 1e-6
+b_lr = 1e-3
 
-data = generate_train_data(expected_patern, 500)
+data = generate_train_data(expected_patern, 50000)
 for x, label in data:
 
     y = f(x)
@@ -27,10 +28,14 @@ for x, label in data:
     loss = loss_function(y, label)
 
 
-    
-    print(f"{y=} | {label=} | {loss=}") 
+    print(f"{y=} | {label=} | {loss=}")
 
     dL_dy = loss_function_derivative(y, label, h)
 
-    w -= lr * dL_dy * x
-    b -= lr * dL_dy
+    w -= w_lr * dL_dy * x
+    b -= b_lr * dL_dy
+
+    w_lr *= 0.99999
+    b_lr *= 0.99999
+
+print(w, b)
