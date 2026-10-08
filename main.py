@@ -2,40 +2,41 @@ from typing import Callable
 import random
 
 from math_utils import differential, derivative
-from loss_function import loss_function, loss_function_derivative
 from data_set import generate_train_data
-
-w = 3
-b = 5
-def f(x : float) -> float:
-    return w * x + b
-
+from loss_function import LossFunction
+from nn import NN
 
 def expected_patern(x):
-    return 5 * x + 20
+    return 3 * x + 2
 
 
+lr = 1e-3
 h = 1e-9
-# learning rate
-w_lr = 1e-6
-b_lr = 1e-3
+model = NN(2)
+loss_function = LossFunction(model, lr, h)
 
-data = generate_train_data(expected_patern, 50000)
+max_loss = 0
+min_loss = 100000000
+
+data = generate_train_data(expected_patern, 500000)
 for x, label in data:
 
-    y = f(x)
+    y = model.forward(x)
 
-    loss = loss_function(y, label)
+    loss = loss_function.loss(y, label)
 
+    min_loss = min(loss, min_loss)
+    max_loss = max(loss, min_loss)
 
-    print(f"{y=} | {label=} | {loss=}")
+    loss_function.backward(x, y, label)
+    if random.randint(1, 50) == 1:
+        print(f"{y:.2f}|{label:.2f}|{loss=}")
 
-    dL_dy = loss_function_derivative(y, label, h)
+print(model.w)
+print(model.b)
+print(max_loss)
+print(min_loss)
 
-    w -= w_lr * dL_dy * x
-    b -= b_lr * dL_dy
-
-    w_lr *= 0.99999
-    b_lr *= 0.99999
-
-print(w, b)
+test = 3
+print(f"{expected_patern(test)=}")
+print(f"{model.forward(test)=}")
